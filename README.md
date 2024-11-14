@@ -23,12 +23,12 @@ The variables ("features") used to train the model are listed below:
 Below is a brief overview of the stages of the machine learning process I went through as part of this 
 analysis:
 <br>
-1. Loading dataset (csv) into analysis tool of choice (in this case python using libraries like ***pandas*** 
-and ***scikit learn***). 
+1. Loading dataset (csv) into analysis tool of choice (in this case python using libraries like pandas
+and scikit learn). 
 <br>
 2. Split the Data into Training and Testing Sets - this allows you to use a part of the real consumer data
 to train the model and the other to test whether the model is predicting creditworthiness in a satisfactory 
-manner. I used ***train_test_split*** from scikit-learn for this step, amongst other functions.
+manner. I used train_test_split from scikit-learn for this step, amongst other functions.
 <br>
 3. Create a model with the original data.
 <br>
@@ -79,18 +79,29 @@ unhealthy loan predictions compared to the other models tested in the analysis. 
      - UnHealthy: 0.96
  
 * **Random Forest Model Results:**
-    * Description of Model 3 Accuracy, Precision, and Recall scores.
+    * Test Acc: 0.992
+    * Precision
+      - Healthy Loan: 1
+      - Unhealthy Loan: 0.94
+    *   Recall
+     - Healthy: 1
+     - Unhealthy: 0.99
+    * F1 Score
+     - Healthy: 1
+     - UnHealthy: 0.96
  
 * **KNN Model Results:**
-    * Description of Model 3 Accuracy, Precision, and Recall scores.
+    * Test Acc: 0.992
+    * Precision
+      - Healthy Loan: 1
+      - Unhealthy Loan: 0.90 
+    *   Recall
+     - Healthy: 1
+     - Unhealthy: 0.97
+    * F1 Score
+     - Healthy: 1
+     - UnHealthy: 0.93
 
 ## Summary
-In summary, I found that the **[WRITE MOST ACCURATE MODEL]** was the best one for this use. This model [WRITE 
-REASONS HERE; SEE BELOW]
-
-[Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-If you do not recommend any of the models, please justify your reasoning.]
+In summary, I found that the **Decision Tree** was the best one for this use. This model kept the high f1 score for healthy loans seen by the other models but also had a higher f1 score unhealthy loans and improved confusion matrix relative to the other models. I would still reccommend human supervison with making the final decision due to 
+the small chances of false positives and negatives, as both are important for banking institutions when handing out a loan.
