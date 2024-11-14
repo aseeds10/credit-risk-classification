@@ -23,16 +23,16 @@ The variables ("features") used to train the model are listed below:
 Below is a brief overview of the stages of the machine learning process I went through as part of this 
 analysis:
 <br>
-1. Loading dataset (csv) into analysis tool of choice (in this case python using libraries like pandas 
-and scikit learn). 
+_1._ Loading dataset (csv) into analysis tool of choice (in this case python using libraries like ***pandas*** 
+and ***scikit learn***). 
 <br>
-2. Split the Data into Training and Testing Sets - this allows you to use a part of the real consumer data
+_2._ Split the Data into Training and Testing Sets - this allows you to use a part of the real consumer data
 to train the model and the other to test whether the model is predicting creditworthiness in a satisfactory 
-manner. I used train_test_split from scikit-learn for this step, amongst other functions.
+manner. I used ***train_test_split*** from scikit-learn for this step, amongst other functions.
 <br>
-3. Create a (Logistic Regression) model with the original data.
+_3._ Create a (Logistic Regression) model with the original data.
 <br>
-4. Evaluate the model’s performance by generating a confusion matrix (evaluates true and false positives and
+_4._ Evaluate the model’s performance by generating a confusion matrix (evaluates true and false positives and
 negatives) and a classification report (looks at accuracy and precision of model).
 <br>
 I decided on the LogisticRegression model algorithim for this machine model due to [DO NOT LEAVE BLANK]
