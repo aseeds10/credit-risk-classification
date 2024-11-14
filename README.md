@@ -30,24 +30,58 @@ and ***scikit learn***).
 to train the model and the other to test whether the model is predicting creditworthiness in a satisfactory 
 manner. I used ***train_test_split*** from scikit-learn for this step, amongst other functions.
 <br>
-3. Create a (Logistic Regression) model with the original data.
+3. Create a model with the original data.
 <br>
 4. Evaluate the model’s performance by generating a confusion matrix (evaluates true and false positives and
 negatives) and a classification report (looks at accuracy and precision of model).
 <br>
 <br>
-I decided on the LogisticRegression model algorithim for this machine model due to [DO NOT LEAVE BLANK]
+I decided on the Decision Tree model algorithim for this machine model due to it having a better classification report score (namely f1 scores) for both healthy and
+unhealthy loan predictions compared to the other models tested in the analysis. Likewise, the false positives (FP) and false negatives (FN) shown in the confusion matrix were overall better when compared to the other models, with the exception of SVM, KNN, and Random Forest having less FNs. The three mentioned models with lower FNs were not selected as their classifcation report scores were lower, mainly in unhealthy loan predictions.
 
 
 ## Results
 
-* **Machine Learning Model 1:**
-    * Description of Model 1 Accuracy, Precision, and Recall scores.
+* **Logistic Regression Model Results:**
+    * Test Acc: 0.993
+    * Precision
+      - Healthy Loan: 1
+      - Unhealthy Loan: 0.86  
+    *   Recall
+     - Healthy: 0.99
+     - Unhealthy: 0.93
+    * F1 Score
+     - Healthy: 1
+     - UnHealthy: 0.89 
 
-* **Machine Learning Model 2:**
-    * Description of Model 2 Accuracy, Precision, and Recall scores.
+* **SVM Model Results:**
+    * Test Acc: 0.994
+    * Precision
+      - Healthy Loan: 1
+      - Unhealthy Loan: 0.86  
+    *   Recall
+     - Healthy: 0.99
+     - Unhealthy: 0.99
+    * F1 Score
+     - Healthy: 1
+     - UnHealthy: 0.92
 
-* **Machine Learning Model 3:**
+* **Decision Trees Model Results:**
+    * Test Acc: 0.990
+    * Precision
+      - Healthy Loan: 1
+      - Unhealthy Loan: 0.97 
+    *   Recall
+     - Healthy: 1
+     - Unhealthy: 0.96
+    * F1 Score
+     - Healthy: 1
+     - UnHealthy: 0.96
+ 
+* **Random Forest Model Results:**
+    * Description of Model 3 Accuracy, Precision, and Recall scores.
+ 
+* **KNN Model Results:**
     * Description of Model 3 Accuracy, Precision, and Recall scores.
 
 ## Summary
